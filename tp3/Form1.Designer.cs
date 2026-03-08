@@ -42,12 +42,14 @@
             button12 = new Button();
             label1 = new Label();
             panel1 = new Panel();
+            panel2 = new Panel();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(3, 3);
+            button1.Location = new Point(0, 3);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 0;
@@ -67,7 +69,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(165, 3);
+            button3.Location = new Point(171, 3);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 2;
@@ -77,7 +79,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(3, 32);
+            button4.Location = new Point(0, 32);
             button4.Name = "button4";
             button4.Size = new Size(75, 23);
             button4.TabIndex = 3;
@@ -97,7 +99,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(165, 32);
+            button6.Location = new Point(171, 32);
             button6.Name = "button6";
             button6.Size = new Size(75, 23);
             button6.TabIndex = 5;
@@ -107,7 +109,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(3, 61);
+            button7.Location = new Point(0, 61);
             button7.Name = "button7";
             button7.Size = new Size(75, 23);
             button7.TabIndex = 6;
@@ -127,7 +129,7 @@
             // 
             // button9
             // 
-            button9.Location = new Point(165, 61);
+            button9.Location = new Point(171, 61);
             button9.Name = "button9";
             button9.Size = new Size(75, 23);
             button9.TabIndex = 8;
@@ -137,7 +139,7 @@
             // 
             // button10
             // 
-            button10.Location = new Point(3, 90);
+            button10.Location = new Point(0, 90);
             button10.Name = "button10";
             button10.Size = new Size(75, 23);
             button10.TabIndex = 9;
@@ -157,7 +159,7 @@
             // 
             // button12
             // 
-            button12.Location = new Point(165, 90);
+            button12.Location = new Point(171, 91);
             button12.Name = "button12";
             button12.Size = new Size(75, 23);
             button12.TabIndex = 11;
@@ -169,11 +171,12 @@
             // 
             label1.AutoSize = true;
             label1.BorderStyle = BorderStyle.FixedSingle;
-            label1.Location = new Point(235, 58);
+            label1.Location = new Point(0, 2);
             label1.Name = "label1";
-            label1.Size = new Size(40, 17);
+            label1.Size = new Size(54, 17);
             label1.TabIndex = 12;
-            label1.Text = "label1";
+            label1.Text = "...............";
+            label1.TextAlign = ContentAlignment.TopCenter;
             label1.Click += label1_Click;
             // 
             // panel1
@@ -190,24 +193,34 @@
             panel1.Controls.Add(button5);
             panel1.Controls.Add(button8);
             panel1.Controls.Add(button7);
-            panel1.Location = new Point(70, 122);
+            panel1.Location = new Point(12, 37);
             panel1.Name = "panel1";
             panel1.Size = new Size(246, 117);
             panel1.TabIndex = 13;
+            panel1.Paint += panel1_Paint;
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(12, 7);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(246, 24);
+            panel2.TabIndex = 14;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(513, 368);
+            ClientSize = new Size(276, 162);
+            Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -226,5 +239,6 @@
         private Button button12;
         private Label label1;
         private Panel panel1;
+        private Panel panel2;
     }
 }
