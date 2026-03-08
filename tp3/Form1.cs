@@ -12,11 +12,14 @@ namespace tp3
             InitializeComponent();
         }
 
+        // function to show text
         private void Tampil(string text)
         {
             label1.Text = text;
         }
 
+
+        //fungsi event click biar gk repetitif, jadinya nanti tinggal passing aja ini button apa
         private void TambahAngka(string angka)
         {
             // Kalau sebelumnya baru tampil hasil, mulai input baru dari awal
@@ -33,6 +36,7 @@ namespace tp3
             Tampil(display);
         }
 
+        //count total
         private void TambahKeTotal()
         {
             if (!string.IsNullOrEmpty(input))
@@ -42,6 +46,8 @@ namespace tp3
             }
         }
 
+
+        //button event implementation
         private void button1_Click(object sender, EventArgs e) => TambahAngka("1");
         private void button2_Click(object sender, EventArgs e) => TambahAngka("2");
         private void button3_Click(object sender, EventArgs e) => TambahAngka("3");
@@ -63,6 +69,8 @@ namespace tp3
             }
         }
 
+
+        // button total
         private void button12_Click(object sender, EventArgs e) // tombol =
         {
             if (!string.IsNullOrEmpty(input))
@@ -76,6 +84,7 @@ namespace tp3
             hasilBaruTampil = true;
         }
 
+        // label 
         private void Form1_Load(object sender, EventArgs e)
         {
             label1.AutoSize = false;
